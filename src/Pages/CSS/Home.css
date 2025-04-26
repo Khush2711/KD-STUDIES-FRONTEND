@@ -1,0 +1,26 @@
+.custom-shadow {
+    box-shadow: 14px 20px white, -3px -4px 56px rgba(90, 175, 249, 0.5);
+}
+
+.animation {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: 30%;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.gsap-marker-start, .gsap-marker-end {
+    z-index: 9999 !important; /* Bring markers to the front */
+  }
+  

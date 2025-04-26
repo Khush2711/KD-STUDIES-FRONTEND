@@ -1,0 +1,47 @@
+.codeblock1 {
+    background: linear-gradient(123.77deg, #9400d3 -6.46%, #ff8c00 59.04%, #ffffff 124.53%);
+    animation: movingObject 2s linear 0s infinite alternate;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right bottom, #ffffff80, #ffffff00);
+    filter: blur(50px);
+}
+
+.code-border {
+    background: linear-gradient(111.93deg, rgba(20, 40, 70, 0.4) -1.4%, rgba(30, 50, 80, 0.6) 104.96%);
+}
+
+@keyframes movingObject {
+    from {
+        transform: translateX(0%) translateY(0%);
+    }
+    to {
+        transform: translateX(60%) translateY(60%);
+    }
+}
+
+.codeblock2 {
+    background: linear-gradient(118.19deg, #0099ff -3.62%, #00e6ff 50.44%, #00ff99 104.51%);
+    position: absolute;
+    filter: blur(50px);
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right bottom, #ffffff80, #ffffff00);
+    animation: circular 5s linear 0s infinite;
+}
+
+@keyframes circular {
+    0% {
+        transform: translateX(0%) translateY(0%);
+    }
+    25% {
+        transform: translateX(60%) translateY(0%);
+    }
+    50% {
+        transform: translateX(60%) translateY(60%);
+    }
+    75% {
+        transform: translateX(0%) translateY(60%);
+    }
+    100% {
+        transform: translateX(0%) translateY(0%);
+    }
+}

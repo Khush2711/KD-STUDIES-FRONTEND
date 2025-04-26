@@ -1,0 +1,24 @@
+/* stepperStyles.css */
+
+.custom-stepper .rfsc-connector {
+    border-top: 2px dotted #4A4A4A; /* Dotted line between steps */
+  }
+  
+  .custom-step .rfsc-circle {
+    border: 2px solid #FFE83D !important;
+    background-color: transparent !important;
+  }
+  
+  .custom-step .rfsc-label {
+    color: #ffffff;
+  }
+  
+  .custom-step:not(.rfsc-active) .rfsc-circle {
+    border: 2px solid #4A4A4A !important;
+    color: #4A4A4A !important;
+  }
+  
+  .custom-step:not(.rfsc-active) .rfsc-label {
+    color: #999999;
+  }
+  

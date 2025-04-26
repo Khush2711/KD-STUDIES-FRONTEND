@@ -1,0 +1,35 @@
+@keyframes colors {
+    0% {
+      border-image-source: linear-gradient(90deg, #ff0000 10%, #ff7f00 20%, #ffff00 40%, #00ff00 60%, #0000ff 80%, #ff0000 100%);
+    }
+    50% {
+      border-image-source: linear-gradient(180deg, #ff0000 10%, #ff7f00 20%, #ffff00 40%, #00ff00 60%, #0000ff 80%, #ff0000 100%);
+    }
+    100% {
+      border-image-source: linear-gradient(270deg, #ff0000 10%, #ff7f00 20%, #ffff00 40%, #00ff00 60%, #0000ff 80%, #ff0000 100%);
+    }
+  }
+  
+  .blur-effect {
+    position: relative;
+    border-radius: 12px; /* Rounded border */
+    margin: 5px;
+    padding: 14px; /* Adjust padding to create space for the border effect */
+    border: 6px solid transparent; /* Transparent border to allow gradient effect */
+    border-image: linear-gradient(90deg, #ff0000 10%, #ff7f00 20%, #ffff00 40%, #00ff00 60%, #0000ff 80%, #ff0000 100%);
+    border-image-slice: 1; /* Apply the gradient to the border */
+    border-width: 10px;
+    animation: colors 4s linear infinite; /* Continuous rotation */
+  }
+  
+  .blur-effect::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: inherit; /* Use the same gradient */
+    filter: blur(12px); /* Add the glowing blur effect around the border */
+    z-index: -1; /* Keep the blur behind the content */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.9); /* Optional shadow for more glow */
+  }
+  
